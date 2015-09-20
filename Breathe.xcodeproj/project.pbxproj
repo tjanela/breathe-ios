@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2A903031BAE219A00809A08 /* BRConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A903021BAE219A00809A08 /* BRConnectionManager.m */; settings = {ASSET_TAGS = (); }; };
+		E2A903091BAE331E00809A08 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A903081BAE331E00809A08 /* BRAPIClient.m */; settings = {ASSET_TAGS = (); }; };
+		E2D908A41BAE17AD00CE1432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908A31BAE17AD00CE1432 /* main.m */; };
+		E2D908A71BAE17AD00CE1432 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908A61BAE17AD00CE1432 /* AppDelegate.m */; };
+		E2D908AA1BAE17AD00CE1432 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908A91BAE17AD00CE1432 /* ViewController.m */; };
+		E2D908AD1BAE17AD00CE1432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D908AB1BAE17AD00CE1432 /* Main.storyboard */; };
+		E2D908B01BAE17AD00CE1432 /* Breathe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2D908AE1BAE17AD00CE1432 /* Breathe.xcdatamodeld */; };
+		E2D908B21BAE17AD00CE1432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D908B11BAE17AD00CE1432 /* Assets.xcassets */; };
+		E2D908B51BAE17AD00CE1432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D908B31BAE17AD00CE1432 /* LaunchScreen.storyboard */; };
+		E2D908C01BAE17AD00CE1432 /* BreatheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908BF1BAE17AD00CE1432 /* BreatheTests.m */; };
+		E2D908CB1BAE17AD00CE1432 /* BreatheUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908CA1BAE17AD00CE1432 /* BreatheUITests.m */; };
+		E2D908E31BAE181300CE1432 /* libRigablue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D908DE1BAE180300CE1432 /* libRigablue.a */; };
+		E513A9DA76FE6A7C55F8BDB8 /* libPods-Breathe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF72DD6042D0AECC6A5D314A /* libPods-Breathe.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2D908BC1BAE17AD00CE1432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D908971BAE17AD00CE1432 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2D9089E1BAE17AD00CE1432;
+			remoteInfo = Breathe;
+		};
+		E2D908C71BAE17AD00CE1432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D908971BAE17AD00CE1432 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2D9089E1BAE17AD00CE1432;
+			remoteInfo = Breathe;
+		};
+		E2D908DD1BAE180300CE1432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D908D81BAE180300CE1432 /* Rigablue.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 202A6E021900EB2E0063D759;
+			remoteInfo = Rigablue;
+		};
+		E2D908DF1BAE180300CE1432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D908D81BAE180300CE1432 /* Rigablue.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 202A6E121900EB2E0063D759;
+			remoteInfo = RigablueTests;
+		};
+		E2D908E11BAE180E00CE1432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2D908D81BAE180300CE1432 /* Rigablue.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 202A6E011900EB2E0063D759;
+			remoteInfo = Rigablue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3411942AC5BC150D7D05C097 /* Pods-Breathe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breathe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breathe/Pods-Breathe.release.xcconfig"; sourceTree = "<group>"; };
+		DF72DD6042D0AECC6A5D314A /* libPods-Breathe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Breathe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E222BB3154A63112097A34C3 /* Pods-Breathe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breathe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Breathe/Pods-Breathe.debug.xcconfig"; sourceTree = "<group>"; };
+		E2A903011BAE219A00809A08 /* BRConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRConnectionManager.h; sourceTree = "<group>"; };
+		E2A903021BAE219A00809A08 /* BRConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRConnectionManager.m; sourceTree = "<group>"; };
+		E2A903051BAE227700809A08 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E2A903071BAE331E00809A08 /* BRAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAPIClient.h; sourceTree = "<group>"; };
+		E2A903081BAE331E00809A08 /* BRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAPIClient.m; sourceTree = "<group>"; };
+		E2D9089F1BAE17AD00CE1432 /* Breathe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breathe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D908A31BAE17AD00CE1432 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2D908A51BAE17AD00CE1432 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2D908A61BAE17AD00CE1432 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2D908A81BAE17AD00CE1432 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2D908A91BAE17AD00CE1432 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2D908AC1BAE17AD00CE1432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2D908AF1BAE17AD00CE1432 /* Breathe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Breathe.xcdatamodel; sourceTree = "<group>"; };
+		E2D908B11BAE17AD00CE1432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2D908B41BAE17AD00CE1432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2D908B61BAE17AD00CE1432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D908BB1BAE17AD00CE1432 /* BreatheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreatheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D908BF1BAE17AD00CE1432 /* BreatheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreatheTests.m; sourceTree = "<group>"; };
+		E2D908C11BAE17AD00CE1432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D908C61BAE17AD00CE1432 /* BreatheUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreatheUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D908CA1BAE17AD00CE1432 /* BreatheUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreatheUITests.m; sourceTree = "<group>"; };
+		E2D908CC1BAE17AD00CE1432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D908D81BAE180300CE1432 /* Rigablue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rigablue.xcodeproj; path = submodules/rigablue/iOS/Rigablue.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2D9089C1BAE17AD00CE1432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D908E31BAE181300CE1432 /* libRigablue.a in Frameworks */,
+				E513A9DA76FE6A7C55F8BDB8 /* libPods-Breathe.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D908B81BAE17AD00CE1432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D908C31BAE17AD00CE1432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C7C417BCE559BE7ECDCB615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF72DD6042D0AECC6A5D314A /* libPods-Breathe.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF873B11A0FA08D3E7E8B048 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E222BB3154A63112097A34C3 /* Pods-Breathe.debug.xcconfig */,
+				3411942AC5BC150D7D05C097 /* Pods-Breathe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2D908961BAE17AD00CE1432 = {
+			isa = PBXGroup;
+			children = (
+				E2D908D81BAE180300CE1432 /* Rigablue.xcodeproj */,
+				E2D908A11BAE17AD00CE1432 /* Breathe */,
+				E2D908BE1BAE17AD00CE1432 /* BreatheTests */,
+				E2D908C91BAE17AD00CE1432 /* BreatheUITests */,
+				E2D908A01BAE17AD00CE1432 /* Products */,
+				DF873B11A0FA08D3E7E8B048 /* Pods */,
+				8C7C417BCE559BE7ECDCB615 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2D908A01BAE17AD00CE1432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2D9089F1BAE17AD00CE1432 /* Breathe.app */,
+				E2D908BB1BAE17AD00CE1432 /* BreatheTests.xctest */,
+				E2D908C61BAE17AD00CE1432 /* BreatheUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2D908A11BAE17AD00CE1432 /* Breathe */ = {
+			isa = PBXGroup;
+			children = (
+				E2D908A51BAE17AD00CE1432 /* AppDelegate.h */,
+				E2D908A61BAE17AD00CE1432 /* AppDelegate.m */,
+				E2D908A81BAE17AD00CE1432 /* ViewController.h */,
+				E2D908A91BAE17AD00CE1432 /* ViewController.m */,
+				E2D908AB1BAE17AD00CE1432 /* Main.storyboard */,
+				E2D908B11BAE17AD00CE1432 /* Assets.xcassets */,
+				E2D908B31BAE17AD00CE1432 /* LaunchScreen.storyboard */,
+				E2D908B61BAE17AD00CE1432 /* Info.plist */,
+				E2D908AE1BAE17AD00CE1432 /* Breathe.xcdatamodeld */,
+				E2D908A21BAE17AD00CE1432 /* Supporting Files */,
+				E2A903011BAE219A00809A08 /* BRConnectionManager.h */,
+				E2A903021BAE219A00809A08 /* BRConnectionManager.m */,
+				E2A903051BAE227700809A08 /* Constants.h */,
+				E2A903071BAE331E00809A08 /* BRAPIClient.h */,
+				E2A903081BAE331E00809A08 /* BRAPIClient.m */,
+			);
+			path = Breathe;
+			sourceTree = "<group>";
+		};
+		E2D908A21BAE17AD00CE1432 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2D908A31BAE17AD00CE1432 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2D908BE1BAE17AD00CE1432 /* BreatheTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2D908BF1BAE17AD00CE1432 /* BreatheTests.m */,
+				E2D908C11BAE17AD00CE1432 /* Info.plist */,
+			);
+			path = BreatheTests;
+			sourceTree = "<group>";
+		};
+		E2D908C91BAE17AD00CE1432 /* BreatheUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2D908CA1BAE17AD00CE1432 /* BreatheUITests.m */,
+				E2D908CC1BAE17AD00CE1432 /* Info.plist */,
+			);
+			path = BreatheUITests;
+			sourceTree = "<group>";
+		};
+		E2D908D91BAE180300CE1432 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2D908DE1BAE180300CE1432 /* libRigablue.a */,
+				E2D908E01BAE180300CE1432 /* RigablueTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2D9089E1BAE17AD00CE1432 /* Breathe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D908CF1BAE17AD00CE1432 /* Build configuration list for PBXNativeTarget "Breathe" */;
+			buildPhases = (
+				F4BA3C7E0CE8070C41DA1AD7 /* Check Pods Manifest.lock */,
+				E2D9089B1BAE17AD00CE1432 /* Sources */,
+				E2D9089C1BAE17AD00CE1432 /* Frameworks */,
+				E2D9089D1BAE17AD00CE1432 /* Resources */,
+				86166BB1E1C2865EDF2BA85D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2D908E21BAE180E00CE1432 /* PBXTargetDependency */,
+			);
+			name = Breathe;
+			productName = Breathe;
+			productReference = E2D9089F1BAE17AD00CE1432 /* Breathe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2D908BA1BAE17AD00CE1432 /* BreatheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D908D21BAE17AD00CE1432 /* Build configuration list for PBXNativeTarget "BreatheTests" */;
+			buildPhases = (
+				E2D908B71BAE17AD00CE1432 /* Sources */,
+				E2D908B81BAE17AD00CE1432 /* Frameworks */,
+				E2D908B91BAE17AD00CE1432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2D908BD1BAE17AD00CE1432 /* PBXTargetDependency */,
+			);
+			name = BreatheTests;
+			productName = BreatheTests;
+			productReference = E2D908BB1BAE17AD00CE1432 /* BreatheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2D908C51BAE17AD00CE1432 /* BreatheUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2D908D51BAE17AD00CE1432 /* Build configuration list for PBXNativeTarget "BreatheUITests" */;
+			buildPhases = (
+				E2D908C21BAE17AD00CE1432 /* Sources */,
+				E2D908C31BAE17AD00CE1432 /* Frameworks */,
+				E2D908C41BAE17AD00CE1432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2D908C81BAE17AD00CE1432 /* PBXTargetDependency */,
+			);
+			name = BreatheUITests;
+			productName = BreatheUITests;
+			productReference = E2D908C61BAE17AD00CE1432 /* BreatheUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2D908971BAE17AD00CE1432 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Bliss Applications";
+				TargetAttributes = {
+					E2D9089E1BAE17AD00CE1432 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					E2D908BA1BAE17AD00CE1432 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = E2D9089E1BAE17AD00CE1432;
+					};
+					E2D908C51BAE17AD00CE1432 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = E2D9089E1BAE17AD00CE1432;
+					};
+				};
+			};
+			buildConfigurationList = E2D9089A1BAE17AD00CE1432 /* Build configuration list for PBXProject "Breathe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2D908961BAE17AD00CE1432;
+			productRefGroup = E2D908A01BAE17AD00CE1432 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E2D908D91BAE180300CE1432 /* Products */;
+					ProjectRef = E2D908D81BAE180300CE1432 /* Rigablue.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E2D9089E1BAE17AD00CE1432 /* Breathe */,
+				E2D908BA1BAE17AD00CE1432 /* BreatheTests */,
+				E2D908C51BAE17AD00CE1432 /* BreatheUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E2D908DE1BAE180300CE1432 /* libRigablue.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRigablue.a;
+			remoteRef = E2D908DD1BAE180300CE1432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2D908E01BAE180300CE1432 /* RigablueTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RigablueTests.xctest;
+			remoteRef = E2D908DF1BAE180300CE1432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2D9089D1BAE17AD00CE1432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D908B51BAE17AD00CE1432 /* LaunchScreen.storyboard in Resources */,
+				E2D908B21BAE17AD00CE1432 /* Assets.xcassets in Resources */,
+				E2D908AD1BAE17AD00CE1432 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D908B91BAE17AD00CE1432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D908C41BAE17AD00CE1432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86166BB1E1C2865EDF2BA85D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Breathe/Pods-Breathe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4BA3C7E0CE8070C41DA1AD7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2D9089B1BAE17AD00CE1432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D908AA1BAE17AD00CE1432 /* ViewController.m in Sources */,
+				E2D908A71BAE17AD00CE1432 /* AppDelegate.m in Sources */,
+				E2A903031BAE219A00809A08 /* BRConnectionManager.m in Sources */,
+				E2D908A41BAE17AD00CE1432 /* main.m in Sources */,
+				E2D908B01BAE17AD00CE1432 /* Breathe.xcdatamodeld in Sources */,
+				E2A903091BAE331E00809A08 /* BRAPIClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D908B71BAE17AD00CE1432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D908C01BAE17AD00CE1432 /* BreatheTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D908C21BAE17AD00CE1432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D908CB1BAE17AD00CE1432 /* BreatheUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2D908BD1BAE17AD00CE1432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2D9089E1BAE17AD00CE1432 /* Breathe */;
+			targetProxy = E2D908BC1BAE17AD00CE1432 /* PBXContainerItemProxy */;
+		};
+		E2D908C81BAE17AD00CE1432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2D9089E1BAE17AD00CE1432 /* Breathe */;
+			targetProxy = E2D908C71BAE17AD00CE1432 /* PBXContainerItemProxy */;
+		};
+		E2D908E21BAE180E00CE1432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Rigablue;
+			targetProxy = E2D908E11BAE180E00CE1432 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2D908AB1BAE17AD00CE1432 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2D908AC1BAE17AD00CE1432 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2D908B31BAE17AD00CE1432 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2D908B41BAE17AD00CE1432 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2D908CD1BAE17AD00CE1432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/submodules/rigablue/iOS/Rigablue";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E2D908CE1BAE17AD00CE1432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/submodules/rigablue/iOS/Rigablue";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2D908D01BAE17AD00CE1432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E222BB3154A63112097A34C3 /* Pods-Breathe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Breathe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blissapplications.Breathe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2D908D11BAE17AD00CE1432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3411942AC5BC150D7D05C097 /* Pods-Breathe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Breathe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blissapplications.Breathe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E2D908D31BAE17AD00CE1432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BreatheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blissapplications.BreatheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breathe.app/Breathe";
+			};
+			name = Debug;
+		};
+		E2D908D41BAE17AD00CE1432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BreatheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blissapplications.BreatheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breathe.app/Breathe";
+			};
+			name = Release;
+		};
+		E2D908D61BAE17AD00CE1432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BreatheUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blissapplications.BreatheUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Breathe;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E2D908D71BAE17AD00CE1432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BreatheUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blissapplications.BreatheUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Breathe;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2D9089A1BAE17AD00CE1432 /* Build configuration list for PBXProject "Breathe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D908CD1BAE17AD00CE1432 /* Debug */,
+				E2D908CE1BAE17AD00CE1432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2D908CF1BAE17AD00CE1432 /* Build configuration list for PBXNativeTarget "Breathe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D908D01BAE17AD00CE1432 /* Debug */,
+				E2D908D11BAE17AD00CE1432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2D908D21BAE17AD00CE1432 /* Build configuration list for PBXNativeTarget "BreatheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D908D31BAE17AD00CE1432 /* Debug */,
+				E2D908D41BAE17AD00CE1432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2D908D51BAE17AD00CE1432 /* Build configuration list for PBXNativeTarget "BreatheUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2D908D61BAE17AD00CE1432 /* Debug */,
+				E2D908D71BAE17AD00CE1432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2D908AE1BAE17AD00CE1432 /* Breathe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2D908AF1BAE17AD00CE1432 /* Breathe.xcdatamodel */,
+			);
+			currentVersion = E2D908AF1BAE17AD00CE1432 /* Breathe.xcdatamodel */;
+			path = Breathe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E2D908971BAE17AD00CE1432 /* Project object */;
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAR-dl-jXH">
+                                <rect key="frame" x="0.0" y="20" width="600" height="38"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-Lc-525">
+                                        <rect key="frame" x="572" y="9" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaS-mR-87A">
+                                        <rect key="frame" x="8" y="4" width="35" height="30"/>
+                                        <state key="normal" title="Scan"/>
+                                        <connections>
+                                            <action selector="scanDevices_touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFC-7P-V3S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="e1E-Lc-525" firstAttribute="centerY" secondItem="xAR-dl-jXH" secondAttribute="centerY" id="LfL-wh-RKO"/>
+                                    <constraint firstItem="oaS-mR-87A" firstAttribute="top" secondItem="xAR-dl-jXH" secondAttribute="top" constant="4" id="So1-Qy-Mw8"/>
+                                    <constraint firstItem="e1E-Lc-525" firstAttribute="trailing" secondItem="xAR-dl-jXH" secondAttribute="trailingMargin" id="V37-UX-nep"/>
+                                    <constraint firstItem="oaS-mR-87A" firstAttribute="centerY" secondItem="e1E-Lc-525" secondAttribute="centerY" id="p1s-e6-91C"/>
+                                    <constraint firstItem="oaS-mR-87A" firstAttribute="leading" secondItem="xAR-dl-jXH" secondAttribute="leadingMargin" id="v6X-9W-BSM"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuj-Td-ACw">
+                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ueE-0Y-Kom"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="S6Y-Lq-k8g"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xAR-dl-jXH" firstAttribute="trailing" secondItem="uuj-Td-ACw" secondAttribute="trailing" id="BHI-9t-COR"/>
+                            <constraint firstItem="xAR-dl-jXH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EhO-cP-1Wm"/>
+                            <constraint firstItem="xAR-dl-jXH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Omk-bc-VaV"/>
+                            <constraint firstItem="xAR-dl-jXH" firstAttribute="leading" secondItem="uuj-Td-ACw" secondAttribute="leading" id="Ra2-1W-0uV"/>
+                            <constraint firstItem="uuj-Td-ACw" firstAttribute="top" secondItem="xAR-dl-jXH" secondAttribute="bottom" id="Zpj-O8-xao"/>
+                            <constraint firstAttribute="trailing" secondItem="xAR-dl-jXH" secondAttribute="trailing" id="eeh-07-eRB"/>
+                            <constraint firstItem="uuj-Td-ACw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gBb-HC-wc3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="e1E-Lc-525" id="yKR-6T-uMY"/>
+                        <outlet property="scanButton" destination="oaS-mR-87A" id="P5F-VR-KqL"/>
+                        <outlet property="tableView" destination="uuj-Td-ACw" id="LlY-4J-3Bj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="167"/>
+        </scene>
+    </scenes>
+</document>

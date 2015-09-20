@@ -1,0 +1,3 @@
+[submodule "submodules/rigablue"]
+	path = submodules/rigablue
+	url = git@github.com:rigado/rigablue
