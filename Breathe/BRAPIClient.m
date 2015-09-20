@@ -40,7 +40,7 @@
 
 - (void)postMeasurements:(NSArray *)measurements success:(void(^)())successBlock error:(void(^)())errorBlock
 {
-    [self POST:@"data"
+    [self POST:@"sensordata/"
     parameters:measurements
        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
            successBlock();

@@ -8,7 +8,10 @@
 
 #import "GameViewController.h"
 #import "BRTreeBranch.h"
+#import "BRConnectionManager.h"
 #import <QuartzCore/QuartzCore.h>
+
+#define kUpdateInteval (1/30.0)
 
 @interface GameViewController ()
 {
@@ -37,7 +40,7 @@
     if(self.updateTimer != nil){
         [self.updateTimer invalidate];
     }
-    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTree:) userInfo:nil repeats:YES];
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:kUpdateInteval target:self selector:@selector(updateTree:) userInfo:nil repeats:YES];
 }
 
 - (void) resetTree{
@@ -64,31 +67,47 @@
 }
 
 - (void) updateTree:(id)sender{
-    if(iterations > 10){
-        [self resetTree];
-    }
-    iterations++;
+    if(iterations <= 450){
+        iterations++;
 
-    NSMutableArray *newLatestBranches = [NSMutableArray array];
-    for (BRTreeBranch *treeBranch in self.latestBranches) {
-        int numberOfBranches = [self random] * 2 + 1;
-        for (int i = 0; i < numberOfBranches; i++) {
-            BRTreeBranch *newTreeBranch = [BRTreeBranch generateTreeBranchWithThickness:treeBranch.thickness.intValue length:[self random] * 80 angle:(M_PI_2) + ([self random] * M_PI_4 * [self randomSign])];
-            [newLatestBranches addObject:newTreeBranch];
-            [treeBranch.subBranches addObject:newTreeBranch];
+        if(iterations ==450){
+            [self resetTree];
+            iterations = 0;
+            return;
+        }
+        if(iterations > 400){
+            return;
         }
     }
-    self.latestBranches = newLatestBranches;
+
+
+    BRConnectionManager *connectionManager = [BRConnectionManager sharedInstance];
+
+    if(iterations % 40 == 0){
+
+        NSMutableArray *newLatestBranches = [NSMutableArray array];
+        for (BRTreeBranch *treeBranch in self.latestBranches) {
+            int numberOfBranches = [self random] * 2 + 1;
+            for (int i = 0; i < numberOfBranches; i++) {
+                BRTreeBranch *newTreeBranch = [BRTreeBranch generateTreeBranchWithThickness:treeBranch.thickness.intValue length:1 angle:(M_PI_2) + ([self random] * M_PI_4 * [self randomSign])];
+                if([self random] > 0.95){
+                    newTreeBranch.hasFlower = YES;
+                }
+                [newLatestBranches addObject:newTreeBranch];
+                [treeBranch.subBranches addObject:newTreeBranch];
+            }
+        }
+        self.latestBranches = newLatestBranches;
+        [connectionManager acknowledgeBreatheCycle];
+    }else {
+        for (BRTreeBranch *treeBranch in self.latestBranches) {
+            treeBranch.length = @(treeBranch.length.intValue + 3 * fabs(sin(2*iterations * kUpdateInteval)));
+        }
+    }
+
 
     self.treeBranchView.treeBranch = self.treeStomp;
     [self.treeBranchView setNeedsDisplay];
-    CGFloat nextIntensity = 0;
-    if(self.treeBranchView.backgroundIntensity == 0.0f){
-        nextIntensity = 1;
-    }
-    [UIView animateWithDuration:0.9 animations:^{
-        self.treeBranchView.backgroundIntensity = nextIntensity;
-    }];
 }
 
 @end

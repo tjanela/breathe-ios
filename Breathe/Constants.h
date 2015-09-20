@@ -12,7 +12,7 @@
 #define kTimeout 5
 #define kSamplePeriod (1.0/20)
 #define kDispatchPeriod (1.0/5)
-#define kBaseURL @""
+#define kBaseURL @"http://breathe.mybluemix.net/"
 #define kUserIdKey @"UserID"
 #define kDeviceConnectedNotificationName @"DeviceConnectedNotification"
 

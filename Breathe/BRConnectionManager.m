@@ -49,15 +49,11 @@
         NSArray *array = [self.measurementsArray subarrayWithRange:NSMakeRange(0, length)];
         [[BRAPIClient sharedInstance] postMeasurements:array success:^{
             NSLog(@"Success");
-            @synchronized(self) {
-                [self.measurementsArray removeObjectsInRange:NSMakeRange(0, length)];
-            }
+            
 
         } error:^{
             NSLog(@"Error");
-            @synchronized(self) {
-                [self.measurementsArray removeObjectsInRange:NSMakeRange(0, length)];
-            }
+
         }];
     }
 }
@@ -122,10 +118,10 @@
     ekg |= (dataBytes[4] << 8);
     ekg |= (dataBytes[5]);
 
-    chest |= (dataBytes[6] << 8);
+    chest |= ((dataBytes[6] << 8) & 0b00001111);
     chest |= (dataBytes[7]);
 
-    belly |= (dataBytes[8] << 8);
+    belly |= ((dataBytes[8] << 8) & 0b00001111);
     belly |= (dataBytes[9]);
 
     aX = dataBytes[10];
@@ -136,7 +132,7 @@
     gY = dataBytes[14];
     gZ = dataBytes[15];
 
-    dictionary[@"id"] = @(packetId);
+    dictionary[@"sid"] = @(packetId);
     dictionary[@"ekg"] = @(ekg);
     dictionary[@"breath_chest"] = @(chest);
     dictionary[@"breath_belly"] = @(belly);
@@ -152,7 +148,91 @@
         [self.measurementsArray addObject:dictionary];
     }
 
+    NSUInteger bellyValue = belly;
+    NSUInteger chestValue = chest;
+    NSInteger newBellySlope = 0;
+    NSInteger newChestSlope = 0;
+
+    if(packetId == 0){
+        _lastBellyValue = belly;
+        _lastChestValue = chest;
+        _currentBellySlope = 0;
+        _currentChestSlope = 0;
+        _inhaleBellyAccumulator = 0;
+        _exhaleBellyAccumulator = 0;
+        _inhaleChestAccumulator = 0;
+        _exhaleChestAccumulator = 0;
+        _currentChestAverage = 0;
+        _currentBellyAverage = 0;
+    }
+    else {
+        //Calculate current slope
+        newBellySlope = belly - bellyValue;
+        newChestSlope = chest - chestValue;
+        //Accumulate properly
+
+        if(signbit(newBellySlope) != signbit(_currentBellySlope)) {
+            if(newBellySlope >= 0){
+                _inhaleBellyAccumulator = (bellyValue * kSamplePeriod);
+            }
+            else {
+                _exhaleBellyAccumulator = (bellyValue * kSamplePeriod);
+            }
+        } else {
+            if(newBellySlope >= 0){
+                _inhaleBellyAccumulator += (bellyValue * kSamplePeriod);
+            }
+            else {
+                _exhaleBellyAccumulator += (bellyValue * kSamplePeriod);
+            }
+        }
+
+        if(signbit(newChestSlope) != signbit(_currentChestSlope)) {
+            if(newChestSlope >= 0){
+                _inhaleChestAccumulator = (chestValue * kSamplePeriod);
+                if(_didInhale){
+                    _breatheCycleComplete = YES;
+                    _didInhale = NO;
+                }
+            }
+            else {
+                if(!_didInhale){
+                    _didInhale = YES;
+                }
+                _exhaleChestAccumulator = (chestValue * kSamplePeriod);
+            }
+        } else {
+            if(newChestSlope >= 0){
+                _inhaleChestAccumulator += (chestValue * kSamplePeriod);
+            }
+            else {
+                _exhaleChestAccumulator += (chestValue * kSamplePeriod);
+            }
+        }
+
+
+        double currentBellyAverage = (bellyValue + (_currentBellyAverage * (packetId - 1))) / packetId;
+        double currentChestAverage = (chestValue + (_currentChestAverage * (packetId - 1))) / packetId;
+
+        _currentBellyAverage = currentBellyAverage;
+        _currentChestAverage = currentChestAverage;
+    }
+
+    _currentBellySlope = newBellySlope;
+    _currentChestSlope = newChestSlope;
+
+
     NSLog(@"Packet: %@", dictionary);
+}
+
+- (double) bellyRatio{
+    return (_lastBellyValue) * 1.0
+    /
+    (_currentBellyAverage);
+}
+
+- (void)acknowledgeBreatheCycle{
+    _breatheCycleComplete = NO;
 }
 
 - (void)didUpdateNotifyStateForCharacteristic:(CBCharacteristic*)characteristic forDevice:(RigLeBaseDevice*)device {

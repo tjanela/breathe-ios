@@ -15,6 +15,7 @@
 @property (strong) NSNumber *angle;
 @property (strong) NSNumber *thickness;
 @property (strong) NSMutableArray *subBranches;
+@property (assign) BOOL hasFlower;
 
 + (BRTreeBranch*) generateTreeBranchWithThickness:(int)thickness length:(int)length angle:(double)angle;
 

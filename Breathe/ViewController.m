@@ -74,7 +74,11 @@
 - (void)didDiscoverDevice:(RigAvailableDeviceData*)device
 {
     [NSThread performBlockOnMainThread:^{
-        self.devicesArray = [NSMutableArray arrayWithArray:[[RigLeDiscoveryManager sharedInstance] retrieveDiscoveredDevices]];
+        NSArray *array =[[RigLeDiscoveryManager sharedInstance] retrieveDiscoveredDevices];
+        array = [array filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nonnull evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+            return [[((RigAvailableDeviceData*) evaluatedObject) peripheral].name hasPrefix:@"TYMWEAR"];
+        }]];
+        self.devicesArray = [NSMutableArray arrayWithArray:array];
         [self.tableView reloadData];
     }];
 }

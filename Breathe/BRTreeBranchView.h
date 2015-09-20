@@ -12,6 +12,8 @@
 @interface BRTreeBranchView : UIView
 {
     CGFloat _backgroundIntensity;
+    UIColor *_lightColor;
+    UIColor *_darkColor;
 }
 
 @property (strong) BRTreeBranch *treeBranch;
