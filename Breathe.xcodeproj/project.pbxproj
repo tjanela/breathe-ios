@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E2A903031BAE219A00809A08 /* BRConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A903021BAE219A00809A08 /* BRConnectionManager.m */; settings = {ASSET_TAGS = (); }; };
 		E2A903091BAE331E00809A08 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A903081BAE331E00809A08 /* BRAPIClient.m */; settings = {ASSET_TAGS = (); }; };
+		E2A9030D1BAE497600809A08 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A9030C1BAE497600809A08 /* DeviceViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E2D908A41BAE17AD00CE1432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908A31BAE17AD00CE1432 /* main.m */; };
 		E2D908A71BAE17AD00CE1432 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908A61BAE17AD00CE1432 /* AppDelegate.m */; };
 		E2D908AA1BAE17AD00CE1432 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908A91BAE17AD00CE1432 /* ViewController.m */; };
@@ -19,6 +20,11 @@
 		E2D908C01BAE17AD00CE1432 /* BreatheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908BF1BAE17AD00CE1432 /* BreatheTests.m */; };
 		E2D908CB1BAE17AD00CE1432 /* BreatheUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D908CA1BAE17AD00CE1432 /* BreatheUITests.m */; };
 		E2D908E31BAE181300CE1432 /* libRigablue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D908DE1BAE180300CE1432 /* libRigablue.a */; };
+		E2E31F9F1BAE4DDB00297AEE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E31F9E1BAE4DDB00297AEE /* GameViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E2E31FA31BAE4E0200297AEE /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E31FA21BAE4E0200297AEE /* DataViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E2E31FA61BAE54BD00297AEE /* BRTreeBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E31FA51BAE54BD00297AEE /* BRTreeBranch.m */; settings = {ASSET_TAGS = (); }; };
+		E2E31FA81BAE567200297AEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E31FA71BAE567200297AEE /* CoreGraphics.framework */; };
+		E2E31FAB1BAE586900297AEE /* BRTreeBranchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E31FAA1BAE586900297AEE /* BRTreeBranchView.m */; settings = {ASSET_TAGS = (); }; };
 		E513A9DA76FE6A7C55F8BDB8 /* libPods-Breathe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF72DD6042D0AECC6A5D314A /* libPods-Breathe.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +75,8 @@
 		E2A903051BAE227700809A08 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E2A903071BAE331E00809A08 /* BRAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAPIClient.h; sourceTree = "<group>"; };
 		E2A903081BAE331E00809A08 /* BRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAPIClient.m; sourceTree = "<group>"; };
+		E2A9030B1BAE497600809A08 /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
+		E2A9030C1BAE497600809A08 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
 		E2D9089F1BAE17AD00CE1432 /* Breathe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breathe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D908A31BAE17AD00CE1432 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2D908A51BAE17AD00CE1432 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +95,15 @@
 		E2D908CA1BAE17AD00CE1432 /* BreatheUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreatheUITests.m; sourceTree = "<group>"; };
 		E2D908CC1BAE17AD00CE1432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2D908D81BAE180300CE1432 /* Rigablue.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rigablue.xcodeproj; path = submodules/rigablue/iOS/Rigablue.xcodeproj; sourceTree = "<group>"; };
+		E2E31F9D1BAE4DDB00297AEE /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		E2E31F9E1BAE4DDB00297AEE /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		E2E31FA11BAE4E0200297AEE /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		E2E31FA21BAE4E0200297AEE /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		E2E31FA41BAE54BD00297AEE /* BRTreeBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTreeBranch.h; sourceTree = "<group>"; };
+		E2E31FA51BAE54BD00297AEE /* BRTreeBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTreeBranch.m; sourceTree = "<group>"; };
+		E2E31FA71BAE567200297AEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E2E31FA91BAE586900297AEE /* BRTreeBranchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTreeBranchView.h; sourceTree = "<group>"; };
+		E2E31FAA1BAE586900297AEE /* BRTreeBranchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTreeBranchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E31FA81BAE567200297AEE /* CoreGraphics.framework in Frameworks */,
 				E2D908E31BAE181300CE1432 /* libRigablue.a in Frameworks */,
 				E513A9DA76FE6A7C55F8BDB8 /* libPods-Breathe.a in Frameworks */,
 			);
@@ -119,6 +137,7 @@
 		8C7C417BCE559BE7ECDCB615 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2E31FA71BAE567200297AEE /* CoreGraphics.framework */,
 				DF72DD6042D0AECC6A5D314A /* libPods-Breathe.a */,
 			);
 			name = Frameworks;
@@ -174,6 +193,16 @@
 				E2A903051BAE227700809A08 /* Constants.h */,
 				E2A903071BAE331E00809A08 /* BRAPIClient.h */,
 				E2A903081BAE331E00809A08 /* BRAPIClient.m */,
+				E2A9030B1BAE497600809A08 /* DeviceViewController.h */,
+				E2A9030C1BAE497600809A08 /* DeviceViewController.m */,
+				E2E31F9D1BAE4DDB00297AEE /* GameViewController.h */,
+				E2E31F9E1BAE4DDB00297AEE /* GameViewController.m */,
+				E2E31FA11BAE4E0200297AEE /* DataViewController.h */,
+				E2E31FA21BAE4E0200297AEE /* DataViewController.m */,
+				E2E31FA41BAE54BD00297AEE /* BRTreeBranch.h */,
+				E2E31FA51BAE54BD00297AEE /* BRTreeBranch.m */,
+				E2E31FA91BAE586900297AEE /* BRTreeBranchView.h */,
+				E2E31FAA1BAE586900297AEE /* BRTreeBranchView.m */,
 			);
 			path = Breathe;
 			sourceTree = "<group>";
@@ -402,11 +431,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E31FAB1BAE586900297AEE /* BRTreeBranchView.m in Sources */,
+				E2E31F9F1BAE4DDB00297AEE /* GameViewController.m in Sources */,
 				E2D908AA1BAE17AD00CE1432 /* ViewController.m in Sources */,
 				E2D908A71BAE17AD00CE1432 /* AppDelegate.m in Sources */,
+				E2E31FA61BAE54BD00297AEE /* BRTreeBranch.m in Sources */,
 				E2A903031BAE219A00809A08 /* BRConnectionManager.m in Sources */,
+				E2E31FA31BAE4E0200297AEE /* DataViewController.m in Sources */,
 				E2D908A41BAE17AD00CE1432 /* main.m in Sources */,
 				E2D908B01BAE17AD00CE1432 /* Breathe.xcdatamodeld in Sources */,
+				E2A9030D1BAE497600809A08 /* DeviceViewController.m in Sources */,
 				E2A903091BAE331E00809A08 /* BRAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

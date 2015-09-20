@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "46053F38D3C8DE4407365794BD4BEE8181A3D4D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "46053F38D3C8DE4407365794BD4BEE8181A3D4D2" : 0,
+    "B3EB64BD20F07C48CB7B8761775C246930EE6D77" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B83BFDBF-3F9E-4E18-B72A-236F6AF6A7FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "46053F38D3C8DE4407365794BD4BEE8181A3D4D2" : "breathe-ios\/",
+    "B3EB64BD20F07C48CB7B8761775C246930EE6D77" : "breathe-ios\/submodules\/rigablue\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Breathe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Breathe.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tjanela\/breathe-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46053F38D3C8DE4407365794BD4BEE8181A3D4D2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rigado\/rigablue",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3EB64BD20F07C48CB7B8761775C246930EE6D77"
+    }
+  ]
+}

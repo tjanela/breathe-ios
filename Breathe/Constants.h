@@ -14,4 +14,6 @@
 #define kDispatchPeriod (1.0/5)
 #define kBaseURL @""
 #define kUserIdKey @"UserID"
+#define kDeviceConnectedNotificationName @"DeviceConnectedNotification"
+
 #endif /* Constants_h */

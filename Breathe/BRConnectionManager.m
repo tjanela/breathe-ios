@@ -38,7 +38,7 @@
     return self;
 }
 
-- (void) networkDispatcher_timerFired:(id)sender{
+- (void) networkDispatcher_timerFired:(id)sender {
     @synchronized(self) {
         if(self.measurementsArray.count == 0){
             NSLog(@"No data to upload");
@@ -62,36 +62,36 @@
     }
 }
 
-- (void) connectToDevice:(RigAvailableDeviceData*)deviceData{
+- (void) connectToDevice:(RigAvailableDeviceData*)deviceData {
     [[RigLeConnectionManager sharedInstance] connectDevice:deviceData connectionTimeout:kTimeout];
 }
 
-- (void)didConnectDevice:(RigLeBaseDevice*)device{
+- (void)didConnectDevice:(RigLeBaseDevice*)device {
     NSLog(@"Device Connected");
     device.delegate = self;
     [device runDiscovery];
 }
-- (void)didDisconnectPeripheral:(CBPeripheral*)peripheral{
+- (void)didDisconnectPeripheral:(CBPeripheral*)peripheral {
     NSLog(@"Did Disconnect Peripheral");
 }
-- (void)deviceConnectionDidFail:(RigAvailableDeviceData*)device{
+- (void)deviceConnectionDidFail:(RigAvailableDeviceData*)device {
     NSLog(@"Device Connection Fail");
 }
-- (void)deviceConnectionDidTimeout:(RigAvailableDeviceData*)device{
+- (void)deviceConnectionDidTimeout:(RigAvailableDeviceData*)device {
     NSLog(@"Device Connection did Timeout");
 }
 
-- (void)discoveryDidCompleteForDevice:(RigLeBaseDevice*)device{
+- (void)discoveryDidCompleteForDevice:(RigLeBaseDevice*)device {
     NSArray* serviceList = [device getSerivceList];
-    for(CBService *service in serviceList){
+    for(CBService *service in serviceList) {
         NSLog(@"Service: %@", [service.UUID UUIDString]);
         NSArray *characteristics = service.characteristics;
-        for(CBCharacteristic *characteristic in characteristics){
+        for(CBCharacteristic *characteristic in characteristics) {
             [device enableNotificationsForCharacteristic:characteristic];
         }
     }
 }
-- (void)didUpdateValueForCharacteristic:(CBCharacteristic*)characteristic forDevice:(RigLeBaseDevice*)device{
+- (void)didUpdateValueForCharacteristic:(CBCharacteristic*)characteristic forDevice:(RigLeBaseDevice*)device {
     NSData *data = characteristic.value;
 
     NSLog(@"Value update: %lu bytes", (unsigned long)data.length);
@@ -115,7 +115,7 @@
     packetId |= (dataBytes[2] << 8);
     packetId |= (dataBytes[3] << 0);
 
-    if(packetId == 0){
+    if(packetId == 0) {
         _packet0Epoch = [[NSDate date] timeIntervalSince1970];
     }
 
@@ -152,15 +152,16 @@
         [self.measurementsArray addObject:dictionary];
     }
 
-
     NSLog(@"Packet: %@", dictionary);
-
 }
-- (void)didUpdateNotifyStateForCharacteristic:(CBCharacteristic*)characteristic forDevice:(RigLeBaseDevice*)device{
+
+- (void)didUpdateNotifyStateForCharacteristic:(CBCharacteristic*)characteristic forDevice:(RigLeBaseDevice*)device {
     NSLog(@"Notify State");
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDeviceConnectedNotificationName object:nil];
+    
 }
 
-- (void)didWriteValueForCharacteristic:(CBCharacteristic*)characteristic forDevice:(RigLeBaseDevice*)device{
+- (void)didWriteValueForCharacteristic:(CBCharacteristic*)characteristic forDevice:(RigLeBaseDevice*)device {
     NSLog(@"Write Value");
 }
 @end

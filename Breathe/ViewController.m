@@ -15,8 +15,6 @@
 #import "BRConnectionManager.h"
 #import <NSThreadBlocks/NSThread+Blocks.h>
 
-#define kTimeout 15
-
 @interface ViewController ()
 
 @property (strong) NSMutableArray *devicesArray;
@@ -33,8 +31,15 @@
         [[RigLeDiscoveryManager sharedInstance] startLeInterface];
         self.scanButton.enabled = YES;
         self.centralManagerReadyTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(centralManagerReadyTimer_fired:) userInfo:nil repeats:YES];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceConnectedNotification:) name:kDeviceConnectedNotificationName object:nil];
     }
     return self;
+}
+
+- (void) deviceConnectedNotification:(NSNotification*)notification{
+    [NSThread performBlockOnMainThread:^{
+        [self performSegueWithIdentifier:@"PushDeviceFeedback" sender:self];
+    }];
 }
 
 - (void) centralManagerReadyTimer_fired:(id) sender {
